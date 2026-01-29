@@ -1,7 +1,8 @@
 name: Publish Package to GitHub NPM Registry
 
 on: 
-  push: 
+  release: 
+    types: [published]
     
 jobs:
     npm-package:
@@ -17,5 +18,6 @@ jobs:
              
         - name: Install Dependencies
           uses: npm install
+
 
 
